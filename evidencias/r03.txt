@@ -1,0 +1,61 @@
+Roteiro 3 | SQL Server 16.0.4250.1 | Developer Edition (64-bit)
+
+Changed database context to 'LojaVirtual'.
+ProdutoID | Nome | Categoria | Preco | Estoque
+5 | Garrafa d'água | Casa | 39.90 | 18
+4 | Luminária | Casa | 60.00 | 0
+2 | Mouse | Eletrônicos | 80.00 | 4
+1 | Teclado | Eletrônicos | 120.00 | 40
+
+PedidoID | Cliente | LinhasItens | Unidades | ValorCalculado
+1 | Cliente Aurora | 2 | 2 | 200.00
+3 | Cliente Brisa | 2 | 3 | 85.00
+
+ClienteID | Nome
+3 | Cliente Cedro
+
+SubtotalDireto
+38.70
+
+ItemPedidoID | Subtotal
+1 | 120.00
+2 | 80.00
+3 | 120.00
+4 | 35.00
+5 | 50.00
+
+PedidoID | StatusPedido | ValorTotal
+1 | Pago | 200.00
+2 | Pendente | 120.00
+
+PedidoID | ClienteID | Cliente | DataPedido | StatusPedido | LinhasItens | Unidades | ValorCalculado
+2 | 1 | Cliente Aurora | 2026-02-03 00:00:00 | Pendente | 1 | 1 | 120.00
+1 | 1 | Cliente Aurora | 2026-01-15 00:00:00 | Pago | 2 | 2 | 200.00
+
+PedidoID | ClienteID | Cliente | DataPedido | StatusPedido | LinhasItens | Unidades | ValorCalculado
+1 | 1 | Cliente Aurora | 2026-01-15 00:00:00 | Pago | 2 | 2 | 200.00
+
+ProdutoID | Antes
+1 | 120.00
+
+ProdutoID | Depois | Linhas
+1 | 125.00 | 1
+
+ErroInexistente
+50002
+
+ErroPreco
+50001
+
+PedidoID | ValorTotal
+1 | 200.00
+2 | 120.00
+
+PedidoID | ValorCalculado | ValorFuncao
+1 | 200.00 | 200.00
+2 | 120.00 | 120.00
+3 | 85.00 | 85.00
+
+Integração: preço, função e totais da view conferidos.
+
+Checkpoint R3 validado. Transações na sessão principal: 0.

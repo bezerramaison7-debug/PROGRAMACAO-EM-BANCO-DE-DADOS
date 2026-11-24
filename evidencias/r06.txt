@@ -1,0 +1,88 @@
+Roteiro 6 | SQL Server 16.0.4250.1 | Developer Edition (64-bit)
+
+Changed database context to 'LojaVirtual'.
+ProdutoID | Nome | Estoque
+1 | Teclado | 38
+2 | Mouse | 1
+3 | Monitor | 9
+4 | Luminária | 0
+5 | Garrafa d'água | 18
+6 | Caderno | 10
+
+CursorAposFalha
+-3
+
+ErroControlado | CursorExterno
+50040 | -3
+
+CursorAposSucesso
+-3
+
+CursorMicrossegundos
+0
+
+ConjuntoMicrossegundos
+0
+
+ProdutoID | NivelAlerta | Mensagem
+2 | ATENCAO | Produto Mouse: estoque atual = 1.
+4 | URGENTE | Produto Luminária: estoque atual = 0.
+
+Urgentes | Atencao | Risco
+1 | 1 | Alto
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 1 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 2 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+Há itens urgentes.
+Mediana cliente-servidor | Cursor | 30 repetições | 139.5 us
+Mediana cliente-servidor | Conjunto | 30 repetições | 87.1 us
+
+Checkpoint R6 validado. Transações na sessão principal: 0.

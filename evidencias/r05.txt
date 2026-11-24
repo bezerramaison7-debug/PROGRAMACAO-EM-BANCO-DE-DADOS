@@ -1,0 +1,46 @@
+Roteiro 5 | SQL Server 16.0.4250.1 | Developer Edition (64-bit)
+
+Changed database context to 'LojaVirtual'.
+PedidoID | StatusPedido | ValorPago | EstoqueAntes | EstoqueDepois
+2 | Pago | 120.00 | 40 | 39
+
+ErroInexistente | Transacoes | Estado
+50010 | 0 | 0
+
+ErroJaPago | Transacoes | Estado
+50011 | 0 | 0
+
+ErroRollback | Transacoes | Estado
+50021 | 0 | 0
+
+StatusPedido | Estoque | PagamentosParciais
+Pendente | 1 | 0
+
+Set Option | Value
+textsize | 2147483647
+language | us_english
+dateformat | mdy
+datefirst | 7
+lock_timeout | -1
+quoted_identifier | SET
+arithabort | SET
+nocount | SET
+ansi_null_dflt_on | SET
+ansi_warnings | SET
+ansi_padding | SET
+ansi_nulls | SET
+concat_null_yields_null | SET
+cursor_close_on_commit | SET
+isolation level | read committed
+
+Estoque | Sessão A bloqueia sessão B | LCK_M_X | espera DMV: 1 ms
+Estoque | Sessão A: ROLLBACK | Sessão B: [(40,)] | teste: 4 ms | @@TRANCOUNT A/B: 0/0
+Pagamento 8 | Sessão A bloqueia sessão B | LCK_M_U | espera DMV: 30 ms
+Pagamento 8 | Sessão A: COMMIT | Sessão B: [(50011,)] | teste: 33 ms | @@TRANCOUNT A/B: 0/0
+Pedido 8 | Pagamentos: 1 | estoque inicial: 39 | estoque final: 38
+READ COMMITTED | Sessão A bloqueia sessão B | LCK_M_S | espera DMV: 30 ms
+READ COMMITTED | Sessão A: ROLLBACK | Sessão B: [(38,)] | teste: 31 ms | @@TRANCOUNT A/B: 0/0
+SERIALIZABLE | Sessão A bloqueia sessão B | LCK_M_S | espera DMV: 30 ms
+SERIALIZABLE | Sessão A: ROLLBACK | Sessão B: [(38,)] | teste: 31 ms | @@TRANCOUNT A/B: 0/0
+
+Checkpoint R5 validado. Transações na sessão principal: 0.

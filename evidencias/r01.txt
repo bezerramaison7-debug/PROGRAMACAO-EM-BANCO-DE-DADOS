@@ -1,0 +1,79 @@
+Roteiro 1 | SQL Server 16.0.4250.1 | Developer Edition (64-bit)
+
+Changed database context to 'master'.
+Changed database context to 'LojaVirtual'.
+ClienteID | Nome | Cidade | Estado
+1 | Cliente Aurora | Campinas | SP
+2 | Cliente Brisa | Curitiba | PR
+3 | Cliente Cedro | Santos | SP
+
+ProdutoID | Nome | Preco
+6 | Caderno | 25.00
+5 | Garrafa d'água | 35.00
+4 | Luminária | 60.00
+2 | Mouse | 80.00
+1 | Teclado | 120.00
+
+Nome | Categoria | Preco | Estoque
+Teclado | Eletrônicos | 120.00 | 30
+Mouse | Eletrônicos | 80.00 | 4
+Monitor | Eletrônicos | 700.00 | 9
+Luminária | Casa | 60.00 | 0
+Garrafa d'água | Casa | 35.00 | 18
+Caderno | Papelaria | 25.00 | 10
+
+PedidoID | Nome | StatusPedido | ValorTotal
+1 | Cliente Aurora | Pago | 200.00
+2 | Cliente Aurora | Pendente | 120.00
+3 | Cliente Brisa | Pago | 85.00
+
+PedidoID | Nome | Subtotal
+1 | Teclado | 120.00
+1 | Mouse | 80.00
+2 | Teclado | 120.00
+3 | Garrafa d'água | 35.00
+3 | Caderno | 50.00
+
+ClienteID | TotalPedidos
+1 | 320.00
+2 | 85.00
+
+ProdutoID | Preco | Estoque | Ativo
+1 | 120.00 | 30 | True
+5 | 35.00 | 18 | True
+6 | 25.00 | 10 | True
+
+ClienteID | Cidade
+3 | Santos
+
+ProdutoID | Preco | Estoque | Ativo
+1 | 120.00 | 40 | True
+5 | 39.90 | 18 | True
+6 | 25.00 | 10 | False
+
+ClienteID | Cidade
+3 | Jundiaí
+
+PrecoHistorico
+35.00
+
+ClienteID | Nome
+4 | Cliente Removível
+
+QuantidadeExcluida
+1
+
+ErroCheck
+547
+
+ErroFK
+547
+
+ErroUnique
+2627
+
+Clientes | Categorias | Produtos | Pedidos | Itens
+3 | 3 | 6 | 3 | 5
+
+
+Checkpoint R1 validado. Transações na sessão principal: 0.

@@ -1,0 +1,38 @@
+Roteiro 4 | SQL Server 16.0.4250.1 | Developer Edition (64-bit)
+
+Changed database context to 'LojaVirtual'.
+AuditoriasAposEstoque
+0
+
+ProdutoID | PrecoAnterior | PrecoNovo | DataAlteracao | Responsavel
+1 | 125.00 | 130.00 | 2026-11-24 | Conta de laboratório
+3 | 700.00 | 705.00 | 2026-11-24 | Conta de laboratório
+2 | 80.00 | 85.00 | 2026-11-24 | Conta de laboratório
+
+TecladoAntes | MouseAntes
+41 | 4
+
+TecladoAposPagamentoERepeticao
+40
+
+MouseAposLote
+1
+
+ErroEstoque | Mensagem
+50021 | Não há estoque suficiente para confirmar o pedido.
+
+PedidoID | StatusPedido
+4 | Pago
+5 | Pendente
+6 | Pago
+7 | Pago
+
+DesabilitadaDuranteTeste
+True
+
+name | is_disabled
+trg_AuditarPrecoProduto | False
+trg_ValidarEstoquePedido | False
+
+
+Checkpoint R4 validado. Transações na sessão principal: 0.

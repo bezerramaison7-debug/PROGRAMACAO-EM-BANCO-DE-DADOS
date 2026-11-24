@@ -1,0 +1,45 @@
+Roteiro 8 | SQL Server 16.0.4250.1 | Developer Edition (64-bit)
+
+Changed database context to 'LojaVirtual'.
+ProdutoID | Nome | Preco | Disponibilidade
+1 | Teclado | 130.00 | Disponível
+2 | Mouse | 85.00 | Disponível
+3 | Monitor | 705.00 | Disponível
+4 | Luminária | 60.00 | Indisponível
+5 | Garrafa d'água | 39.90 | Disponível
+
+ErroAcessoDireto
+229
+
+ProdutoID | Nome | Preco | Disponibilidade
+2 | Mouse | 85.00 | Disponível
+
+ProdutoID | Nome | Preco | Disponibilidade
+5 | Garrafa d'água | 39.90 | Disponível
+
+ErroTermoVazio
+50050
+
+ContextoRestaurado
+True
+
+actual_state_desc | desired_state_desc | current_storage_size_mb | readonly_reason
+READ_WRITE | READ_WRITE | 0 | 0
+
+query_id | count_executions | DuracaoMedia_us | CpuMedia_us | LeiturasLogicasMedias
+115 | 1 | 171420.0 | 171397.0 | 231353.0
+95 | 6 | 5249.5 | 10.166666666666666 | 2.3333333333333335
+97 | 2 | 3134.5 | 3102.0 | 275.5
+86 | 1 | 371.0 | 371.0 | 24.0
+81 | 2 | 178.5 | 178.5 | 8.5
+84 | 2 | 108.5 | 108.5 | 5.5
+83 | 3 | 78.33333333333333 | 78.33333333333333 | 10.0
+98 | 3 | 77.66666666666667 | 77.66666666666667 | 12.0
+87 | 1 | 73.0 | 73.0 | 9.0
+51 | 2 | 70.0 | 70.0 | 7.5
+
+Sessão observada | status | comando | CPU ms | decorrido ms | espera
+Catálogo A | suspended | WAITFOR | 0 | 0 | WAITFOR
+Linhas públicas após a espera controlada: 5
+
+Checkpoint R8 validado. Transações na sessão principal: 0.

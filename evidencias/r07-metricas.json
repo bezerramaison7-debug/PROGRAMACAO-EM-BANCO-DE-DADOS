@@ -1,0 +1,67 @@
+{
+  "inicial": {
+    "operadores": [
+      "Clustered Index Scan"
+    ],
+    "linhas": 27,
+    "leituras": 114,
+    "cpu_ms": 0,
+    "decorrido_ms": 0
+  },
+  "nao-sargavel": {
+    "operadores": [
+      "Clustered Index Scan"
+    ],
+    "linhas": 4023,
+    "leituras": 114,
+    "cpu_ms": 2,
+    "decorrido_ms": 2
+  },
+  "sargavel": {
+    "operadores": [
+      "Clustered Index Scan"
+    ],
+    "linhas": 4023,
+    "leituras": 114,
+    "cpu_ms": 1,
+    "decorrido_ms": 1
+  },
+  "apos-indice": {
+    "operadores": [
+      "Nested Loops",
+      "Merge Interval",
+      "Concatenation",
+      "Compute Scalar",
+      "Constant Scan",
+      "Compute Scalar",
+      "Constant Scan",
+      "Index Seek"
+    ],
+    "linhas": 27,
+    "leituras": 2,
+    "cpu_ms": 0,
+    "decorrido_ms": 0
+  },
+  "somente-cliente": {
+    "operadores": [
+      "Index Seek"
+    ],
+    "linhas": 504
+  },
+  "somente-data": {
+    "operadores": [
+      "Index Scan"
+    ],
+    "linhas": 993
+  },
+  "juncao": {
+    "operadores": [
+      "Sort",
+      "Stream Aggregate",
+      "Nested Loops",
+      "Clustered Index Scan",
+      "Clustered Index Scan"
+    ],
+    "linhas": 4
+  }
+}

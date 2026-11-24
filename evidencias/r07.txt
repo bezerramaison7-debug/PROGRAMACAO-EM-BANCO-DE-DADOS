@@ -1,0 +1,202 @@
+Roteiro 7 | SQL Server 16.0.4250.1 | Developer Edition (64-bit)
+
+Changed database context to 'LojaVirtual'.
+index_name | index_description | index_keys
+PK__Pedidos__09BA1410ADBD1B00 | clustered, unique, primary key located on PRIMARY | PedidoID
+
+name | type_desc | is_unique | is_disabled
+PK__Pedidos__09BA1410ADBD1B00 | CLUSTERED | True | False
+
+PedidoID | ClienteID | DataPedido | StatusPedido | ValorTotal
+1 | 1 | 2026-01-15 00:00:00 | Pago | 200.00
+2 | 1 | 2026-02-03 00:00:00 | Pago | 120.00
+1128 | 1 | 2026-01-25 00:00:00 | Cancelado | 0.00
+1168 | 1 | 2026-03-06 00:00:00 | Cancelado | 0.00
+2968 | 1 | 2026-02-08 00:00:00 | Cancelado | 0.00
+3008 | 1 | 2026-03-20 00:00:00 | Cancelado | 0.00
+4768 | 1 | 2026-01-13 00:00:00 | Cancelado | 0.00
+4808 | 1 | 2026-02-22 00:00:00 | Cancelado | 0.00
+6608 | 1 | 2026-01-27 00:00:00 | Cancelado | 0.00
+6648 | 1 | 2026-03-08 00:00:00 | Cancelado | 0.00
+8408 | 1 | 2026-01-01 00:00:00 | Cancelado | 0.00
+8448 | 1 | 2026-02-10 00:00:00 | Cancelado | 0.00
+8488 | 1 | 2026-03-22 00:00:00 | Cancelado | 0.00
+10248 | 1 | 2026-01-15 00:00:00 | Cancelado | 0.00
+10288 | 1 | 2026-02-24 00:00:00 | Cancelado | 0.00
+12088 | 1 | 2026-01-29 00:00:00 | Cancelado | 0.00
+Linhas retornadas: 27
+
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+Table 'Pedidos'. Scan count 1, logical reads 114, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 1 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+Plano real inicial: {'operadores': ['Clustered Index Scan'], 'linhas': 27, 'leituras': 114, 'cpu_ms': 0, 'decorrido_ms': 0}
+PedidoID | ClienteID | DataPedido | ValorTotal
+1 | 1 | 2026-01-15 00:00:00 | 200.00
+2 | 1 | 2026-02-03 00:00:00 | 120.00
+3 | 2 | 2026-03-02 00:00:00 | 85.00
+4 | 1 | 2026-04-01 00:00:00 | 130.00
+5 | 2 | 2026-04-02 00:00:00 | 8500.00
+6 | 1 | 2026-04-03 00:00:00 | 85.00
+7 | 2 | 2026-04-04 00:00:00 | 170.00
+8 | 2 | 2026-05-01 00:00:00 | 130.00
+1104 | 2 | 2026-01-01 00:00:00 | 0.00
+1105 | 3 | 2026-01-02 00:00:00 | 0.00
+1106 | 2 | 2026-01-03 00:00:00 | 0.00
+1107 | 3 | 2026-01-04 00:00:00 | 0.00
+1108 | 2 | 2026-01-05 00:00:00 | 0.00
+1109 | 3 | 2026-01-06 00:00:00 | 0.00
+1110 | 2 | 2026-01-07 00:00:00 | 0.00
+1111 | 3 | 2026-01-08 00:00:00 | 0.00
+Linhas retornadas: 4023
+
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+Table 'Pedidos'. Scan count 1, logical reads 114, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+SQL Server Execution Times:
+   CPU time = 1 ms,  elapsed time = 2 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+Plano real nao-sargavel: {'operadores': ['Clustered Index Scan'], 'linhas': 4023, 'leituras': 114, 'cpu_ms': 2, 'decorrido_ms': 2}
+PedidoID | ClienteID | DataPedido | ValorTotal
+1 | 1 | 2026-01-15 00:00:00 | 200.00
+2 | 1 | 2026-02-03 00:00:00 | 120.00
+3 | 2 | 2026-03-02 00:00:00 | 85.00
+4 | 1 | 2026-04-01 00:00:00 | 130.00
+5 | 2 | 2026-04-02 00:00:00 | 8500.00
+6 | 1 | 2026-04-03 00:00:00 | 85.00
+7 | 2 | 2026-04-04 00:00:00 | 170.00
+8 | 2 | 2026-05-01 00:00:00 | 130.00
+1104 | 2 | 2026-01-01 00:00:00 | 0.00
+1105 | 3 | 2026-01-02 00:00:00 | 0.00
+1106 | 2 | 2026-01-03 00:00:00 | 0.00
+1107 | 3 | 2026-01-04 00:00:00 | 0.00
+1108 | 2 | 2026-01-05 00:00:00 | 0.00
+1109 | 3 | 2026-01-06 00:00:00 | 0.00
+1110 | 2 | 2026-01-07 00:00:00 | 0.00
+1111 | 3 | 2026-01-08 00:00:00 | 0.00
+Linhas retornadas: 4023
+
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+Table 'Pedidos'. Scan count 1, logical reads 114, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+SQL Server Execution Times:
+   CPU time = 2 ms,  elapsed time = 1 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+Plano real sargavel: {'operadores': ['Clustered Index Scan'], 'linhas': 4023, 'leituras': 114, 'cpu_ms': 1, 'decorrido_ms': 1}
+PedidosEquivalentes
+4023
+
+PedidoID | ClienteID | DataPedido | StatusPedido | ValorTotal
+8408 | 1 | 2026-01-01 00:00:00 | Cancelado | 0.00
+13888 | 1 | 2026-01-03 00:00:00 | Cancelado | 0.00
+19368 | 1 | 2026-01-05 00:00:00 | Cancelado | 0.00
+4768 | 1 | 2026-01-13 00:00:00 | Cancelado | 0.00
+1 | 1 | 2026-01-15 00:00:00 | Pago | 200.00
+10248 | 1 | 2026-01-15 00:00:00 | Cancelado | 0.00
+15728 | 1 | 2026-01-17 00:00:00 | Cancelado | 0.00
+1128 | 1 | 2026-01-25 00:00:00 | Cancelado | 0.00
+6608 | 1 | 2026-01-27 00:00:00 | Cancelado | 0.00
+12088 | 1 | 2026-01-29 00:00:00 | Cancelado | 0.00
+17568 | 1 | 2026-01-31 00:00:00 | Cancelado | 0.00
+2 | 1 | 2026-02-03 00:00:00 | Pago | 120.00
+2968 | 1 | 2026-02-08 00:00:00 | Cancelado | 0.00
+8448 | 1 | 2026-02-10 00:00:00 | Cancelado | 0.00
+13928 | 1 | 2026-02-12 00:00:00 | Cancelado | 0.00
+19408 | 1 | 2026-02-14 00:00:00 | Cancelado | 0.00
+Linhas retornadas: 27
+
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+Table 'Pedidos'. Scan count 1, logical reads 2, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+SQL Server Execution Times:
+   CPU time = 1 ms,  elapsed time = 0 ms.
+SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+Plano real apos-indice: {'operadores': ['Nested Loops', 'Merge Interval', 'Concatenation', 'Compute Scalar', 'Constant Scan', 'Compute Scalar', 'Constant Scan', 'Index Seek'], 'linhas': 27, 'leituras': 2, 'cpu_ms': 0, 'decorrido_ms': 0}
+PedidoID | ClienteID | DataPedido | StatusPedido | ValorTotal
+5488 | 1 | 2023-01-03 00:00:00 | Cancelado | 0.00
+10968 | 1 | 2023-01-05 00:00:00 | Cancelado | 0.00
+16448 | 1 | 2023-01-07 00:00:00 | Cancelado | 0.00
+1848 | 1 | 2023-01-15 00:00:00 | Cancelado | 0.00
+7328 | 1 | 2023-01-17 00:00:00 | Cancelado | 0.00
+12808 | 1 | 2023-01-19 00:00:00 | Cancelado | 0.00
+18288 | 1 | 2023-01-21 00:00:00 | Cancelado | 0.00
+3688 | 1 | 2023-01-29 00:00:00 | Cancelado | 0.00
+9168 | 1 | 2023-01-31 00:00:00 | Cancelado | 0.00
+14648 | 1 | 2023-02-02 00:00:00 | Cancelado | 0.00
+48 | 1 | 2023-02-10 00:00:00 | Cancelado | 0.00
+5528 | 1 | 2023-02-12 00:00:00 | Cancelado | 0.00
+11008 | 1 | 2023-02-14 00:00:00 | Cancelado | 0.00
+16488 | 1 | 2023-02-16 00:00:00 | Cancelado | 0.00
+1888 | 1 | 2023-02-24 00:00:00 | Cancelado | 0.00
+7368 | 1 | 2023-02-26 00:00:00 | Cancelado | 0.00
+Linhas retornadas: 504
+
+Plano real somente-cliente: {'operadores': ['Index Seek'], 'linhas': 504}
+PedidoID | ClienteID | DataPedido | StatusPedido | ValorTotal
+8408 | 1 | 2026-01-01 00:00:00 | Cancelado | 0.00
+13888 | 1 | 2026-01-03 00:00:00 | Cancelado | 0.00
+19368 | 1 | 2026-01-05 00:00:00 | Cancelado | 0.00
+4768 | 1 | 2026-01-13 00:00:00 | Cancelado | 0.00
+1 | 1 | 2026-01-15 00:00:00 | Pago | 200.00
+10248 | 1 | 2026-01-15 00:00:00 | Cancelado | 0.00
+15728 | 1 | 2026-01-17 00:00:00 | Cancelado | 0.00
+1128 | 1 | 2026-01-25 00:00:00 | Cancelado | 0.00
+6608 | 1 | 2026-01-27 00:00:00 | Cancelado | 0.00
+12088 | 1 | 2026-01-29 00:00:00 | Cancelado | 0.00
+17568 | 1 | 2026-01-31 00:00:00 | Cancelado | 0.00
+2 | 1 | 2026-02-03 00:00:00 | Pago | 120.00
+2968 | 1 | 2026-02-08 00:00:00 | Cancelado | 0.00
+8448 | 1 | 2026-02-10 00:00:00 | Cancelado | 0.00
+13928 | 1 | 2026-02-12 00:00:00 | Cancelado | 0.00
+19408 | 1 | 2026-02-14 00:00:00 | Cancelado | 0.00
+Linhas retornadas: 993
+
+Plano real somente-data: {'operadores': ['Index Scan'], 'linhas': 993}
+ClienteID | QuantidadePedidos
+3 | 10000
+2 | 9504
+1 | 504
+
+Name | Updated | Rows | Rows Sampled | Steps | Density | Average key length | String Index | Filter Expression | Unfiltered Rows | Persisted Sample Percent
+IX_Pedidos_Cliente_Data | Nov 24 2026 11:46AM | 20008 | 20008 | 3 | 0.0 | 14.0 | NO  | NULL | 20008 | 0.0
+
+All density | Average Length | Columns
+0.3333333432674408 | 4.0 | ClienteID
+0.00042918455437757075 | 10.0 | ClienteID, DataPedido
+4.998000804334879e-05 | 14.0 | ClienteID, DataPedido, PedidoID
+
+RANGE_HI_KEY | RANGE_ROWS | EQ_ROWS | DISTINCT_RANGE_ROWS | AVG_RANGE_ROWS
+1 | 0.0 | 504.0 | 0 | 1.0
+2 | 0.0 | 9504.0 | 0 | 1.0
+3 | 0.0 | 10000.0 | 0 | 1.0
+
+index_name | index_description | index_keys
+PK__ItensPed__8433C8AF38065305 | clustered, unique, primary key located on PRIMARY | ItemPedidoID
+
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+ProdutoID | Nome | QuantidadeNosItens
+2 | Mouse | 104
+1 | Teclado | 4
+6 | Caderno | 2
+5 | Garrafa d'água | 1
+Linhas retornadas: 4
+
+Plano real juncao: {'operadores': ['Sort', 'Stream Aggregate', 'Nested Loops', 'Clustered Index Scan', 'Clustered Index Scan'], 'linhas': 4}
+
+Checkpoint R7 validado. Transações na sessão principal: 0.
